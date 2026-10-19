@@ -6,7 +6,7 @@ trigger:
 pr: none
 
 pool:
-  name: 'codeway-aws-linux2023'
+  vmImage: 'ubuntu-latest'
 
 jobs:
 - job: CheckAndRun
