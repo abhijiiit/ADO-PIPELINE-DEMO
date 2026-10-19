@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-      - DevOps_feature_Branch
+      - DevOps-feature-Branch
 
 pr: none
 
