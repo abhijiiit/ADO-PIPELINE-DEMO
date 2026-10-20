@@ -1,0 +1,22 @@
+trigger: none
+pr: none
+
+parameters:
+- name: Environment
+  displayName: 'Environment'
+  type: string
+  default: 'Dev'
+  values:
+    - Dev
+    - DEV
+    - ITG
+    - PROD
+    - Pre-Prod
+
+pool:
+  name: 'codeway-aws-linux2023'
+
+steps:
+- bash: |
+    echo "Deploying to ${{ parameters.Environment }}"
+  displayName: 'Display selected environment'
