@@ -14,7 +14,7 @@ parameters:
     - Pre-Prod
 
 pool:
-  name: 'codeway-aws-linux2023'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - bash: |
