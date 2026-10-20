@@ -5,9 +5,8 @@ parameters:
 - name: Environment
   displayName: 'Environment'
   type: string
-  default: 'Dev'
+  default: 'DEV'
   values:
-    - Dev
     - DEV
     - ITG
     - PROD
