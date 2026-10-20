@@ -1,7 +1,4 @@
-trigger:
-  branches:
-    include:
-      - DevOps-feature-Branch
+trigger: none
 
 pr: none
 
