@@ -1,0 +1,36 @@
+name: Check Folder Before ADO Trigger
+
+on:
+  push:
+    branches:
+      - DevOps-feature-Branch
+
+permissions:
+  contents: read
+
+jobs:
+  check-folder:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check Test Folder
+        id: folder_check
+        shell: bash
+        run: |
+          if [ -d "Test_folder" ]; then
+            echo "Test_folder exists."
+            echo "Do not trigger Azure DevOps pipeline."
+            echo "trigger_ado=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Test_folder does not exists."
+            echo "Azure DevOps pipeline can be triggered."
+            echo "trigger_ado=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Display trigger decision
+        shell: bash
+        run: |
+          echo "Trigger ADO: ${{steps.folder_check.outputs.trigger_ado }}"
