@@ -5,7 +5,7 @@ parameters:
 - name: Environment
   displayName: 'Environment'
   type: string
-#  default: 'DEV'
+  default: 'DEV'
   values:
     - DEV
     - ITG
