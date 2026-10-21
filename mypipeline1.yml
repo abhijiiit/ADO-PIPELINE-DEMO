@@ -3,7 +3,7 @@ pr: none
 
 parameters:
 - name: Environment
-  displayName: 'Environment'
+  displayName: 'Env'
   type: string
   default: 'DEV'
   values:
@@ -17,5 +17,5 @@ pool:
 
 steps:
 - bash: |
-    echo "Deploying to ${{ parameters.Environment }}"
+    echo "Deploying to ${{ parameters.Env }}"
   displayName: 'Display selected environment'
