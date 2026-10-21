@@ -3,7 +3,7 @@ pr: none
 
 parameters:
 - name: Environment
-  displayName: 'Env'
+  displayName: 'Environment'
   type: string
   default: 'DEV'
   values:
