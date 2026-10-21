@@ -17,5 +17,5 @@ pool:
 
 steps:
 - bash: |
-    echo "Deploying to ${{ parameters.Env }}"
+    echo "Deploying to ${{ parameters.Environment }}"
   displayName: 'Display selected environment'
