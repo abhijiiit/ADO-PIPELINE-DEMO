@@ -1,4 +1,10 @@
-trigger: none
+trigger:
+  branches:
+    include:
+      - DevOps-feature-Branch
+  paths:
+    exclude:
+      - Test_folder/**
 
 pr: none
 
