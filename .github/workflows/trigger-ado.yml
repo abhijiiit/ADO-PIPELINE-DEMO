@@ -36,7 +36,8 @@ jobs:
           echo "Trigger ADO: ${{steps.folder_check.outputs.trigger_ado }}"
 
       - name: Trigger Azure DevOps Pipeline
-        if: steps.folder_check.outputs.trigger_ado == 'true'
+        if: ${{ false }}
+       # if: steps.folder_check.outputs.trigger_ado == 'true'
         shell: bash
         env:
           AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
